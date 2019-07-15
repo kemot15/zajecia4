@@ -10,6 +10,7 @@ public class Triangle {
     }
 
     double triangleArea (){
-        return Math.pow(a, 2)* Math.sqrt(3)/4;
+        double p = (a+b+c)/2;
+        return Math.sqrt(p*(p-a)*(p-b)*(p-c));
     }
 }
