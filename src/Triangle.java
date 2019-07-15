@@ -8,4 +8,8 @@ public class Triangle {
         this.b = b;
         this.c = c;
     }
+
+    double triangleArea (){
+        return Math.pow(a, 2)* Math.sqrt(3)/4;
+    }
 }

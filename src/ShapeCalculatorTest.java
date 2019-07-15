@@ -6,20 +6,20 @@ public class ShapeCalculatorTest {
         Triangle triangle1 = new Triangle(3,4,5);
         ShapeCalculator calculator = new ShapeCalculator();
 
-        double squareArea = calculator.squareArea(square1);
+        double squareArea = square1.squareArea();
         double squarePerimeter = calculator.squarePerimeter(square1);
         System.out.println("Pole i obwod kwadratu : " + squareArea + " " + squarePerimeter);
 
         double rectPerimeter  =  calculator.rectPerimeter(rectangle1);
-        double rectArea = calculator.rectangleArea(rectangle1);
+        double rectArea = rectangle1.rectangleArea();
         System.out.println("Pole i obwod prostokata: " + rectArea + " " + rectPerimeter);
 
-        double circleArea = calculator.circleArea(circle1);
+        double circleArea = circle1.circleArea();
         double circlePerimeter = calculator.circlePerimeter(circle1);
         System.out.println("Pole i obwod kola: " + circleArea + " " + circlePerimeter);
 
         double trianglePerimeter = calculator.trainglePerimeter(triangle1);
-        double triangleArea = calculator.triangleArea(triangle1);
+        double triangleArea = triangle1.triangleArea();
         System.out.println("Pole i obwod trojkata: " + triangleArea + " " + trianglePerimeter);
 
     }

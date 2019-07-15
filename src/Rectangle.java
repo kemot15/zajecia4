@@ -6,4 +6,8 @@ public class Rectangle {
         this.a = a;
         this.b = b;
     }
+
+    double rectangleArea (){
+        return a * b;
+    }
 }
