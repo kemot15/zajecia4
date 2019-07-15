@@ -1,33 +1,39 @@
 public class Timer {
     int seconds;
-    int minutes;
-    int hours;
     long countSecond;
+    //int seconds2 = seconds;
 
     void addSeconds(int seconds){
         this.seconds+=seconds;
-        getSeconds();
+        countSecond += seconds;
     }
 
     void addMinutes(int minutes){
-        this.minutes+=minutes;
+        this.seconds+=minutes*60;
+        countSecond += minutes*60;
     }
 
     void addHours(int hours){
-        this.hours+=hours;
+        this.seconds+=hours*3600;
+        countSecond +=hours*3600;
     }
 
     void step(){
         this.seconds++;
+        countSecond ++;
     }
 
     String getTime(){
-        int secToMin = seconds/60;
-        seconds = seconds%60;
-        int minToH = minutes/60;
-        minutes = minutes%60+secToMin;
-        hours+=minToH;
-        return hours +":"+minutes+":"+seconds;
+        int hours = this.seconds/3600;
+        this.seconds = this.seconds%3600;
+        int minutes = this.seconds/60;
+        this.seconds = this.seconds%60;
+//        int secToMin = seconds/60;
+//        seconds = seconds%60;
+//        int minToH = minutes/60;
+//        minutes = minutes%60+secToMin;
+//        hours+=minToH;
+        return hours +":"+minutes+":"+ this.seconds;
     }
 
     long getSeconds(){

@@ -6,6 +6,7 @@ public class TimerTest {
         timer.step(); //0:0:3
         timer.addSeconds(12); //0:0:15
         timer.addMinutes(3); //0:3:15
+       // timer.addHours(2);
 
         String time = timer.getTime();
         long  sec = timer.getSeconds();
